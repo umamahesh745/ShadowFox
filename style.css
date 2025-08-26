@@ -1,0 +1,283 @@
+/* =======================
+   Reset and Base Styles
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =======================
+   Header & Navigation
+======================= */
+header {
+  background-color: #1f2937;
+  color: white;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #4ade80;
+}
+
+/* =======================
+   Hero Section
+======================= */
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background: linear-gradient(to right, #4ade80, #06b6d4);
+  color: white;
+}
+
+.hero h2 span {
+  color: #fff200;
+}
+
+.hero p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #1f2937;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4ade80;
+  color: #1f2937;
+}
+
+/* =======================
+   Section Styles
+======================= */
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1f2937;
+}
+
+/* Fade-in effect */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* =======================
+   About Section
+======================= */
+#about p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.profile-pic {
+  display: block;
+  max-width: 200px;
+  margin: 20px auto 0;
+  border-radius: 50%;
+  border: 4px solid #4ade80;
+}
+
+/* =======================
+   Skills Section
+======================= */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.skills-list span {
+  background-color: #06b6d4;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.skills-list span:hover {
+  background-color: #4ade80;
+  color: #1f2937;
+}
+
+/* =======================
+   Projects Section
+======================= */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 300px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+/* =======================
+   Certifications Section
+======================= */
+.certifications-grid {
+  display: flex;          /* arrange children side by side */
+  flex-wrap: wrap;        /* wrap to next line on smaller screens */
+  gap: 20px;              /* space between certificates */
+  justify-content: center; /* center cards horizontally */
+}
+
+.cert-card {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+  max-width: 250px;        /* card width */
+  width: 100%;             /* fills flex column */
+}
+
+.cert-card img {
+  width: 100%;
+  max-width: 200px;        /* limit image size */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;     /* center image */
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+
+
+/* =======================
+   Contact Section
+======================= */
+.contact-link,
+.email-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.contact-link a,
+.email-link a {
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.contact-link a:hover,
+.email-link a:hover {
+  color: #4ade80;
+}
+
+.email-icon,
+.linkedin-icon,
+.github-icon {
+  color: #06b6d4;
+  font-size: 1.2rem;
+}
+
+/* =======================
+   Footer
+======================= */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1f2937;
+  color: white;
+  margin-top: 50px;
+}
+
+/* =======================
+   Responsive
+======================= */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
